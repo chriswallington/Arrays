@@ -16,16 +16,23 @@ namespace Arrays
 
             DeDuplicateDictionary(randomNumbers, numberDictionary);
 
-            var results = numberDictionary.OrderBy(n => n.Value);
+            //var results = numberDictionary.OrderBy(n => n.Value);
 
-            foreach (var result in results)
+            //foreach (var result in results)
+            //{
+            //    Console.WriteLine($"{result}");
+            //}
+
+            SortDictionary(numberDictionary);
+
+        }
+
+        private static void SortDictionary(SortedDictionary<int, int> numberDictionary)
+        {
+            foreach (KeyValuePair<int, int> number in numberDictionary.OrderBy(n => n.Value))
             {
-                Console.WriteLine($"{result}");
+                Console.WriteLine($"{number.Key},{number.Value}");
             }
-
-
-
-
         }
 
         private static void DeDuplicateDictionary(int[] randomNumbers, SortedDictionary<int, int> numberDictionary)
