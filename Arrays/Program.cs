@@ -16,25 +16,12 @@ namespace Arrays
 
             DeDuplicateDictionary(randomNumbers, numberDictionary);
 
-            
+            var results = numberDictionary.OrderBy(n => n.Value);
 
-            //numberDictionary.OrderBy(x => x.Value).ToList();
-            
-            
-                        
-
-
-            //for (int i = 0; i < randomNumbers.Length; i++)
-            //{
-            //    if (!randomNumbers.Contains(i))
-            //    {
-            //        numberDictionary.Add(randomNumbers[i],"non duplicate number");
-
-            //    }
-
-            //}
-
-
+            foreach (var result in results)
+            {
+                Console.WriteLine($"{result}");
+            }
 
 
 
